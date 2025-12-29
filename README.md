@@ -16,7 +16,7 @@ For each course, the following resources are typically provided:
 
 - Home Assignments and Solutions: Problem sets with detailed solutions, either typeset in LaTeX or handwritten by the author.
 
-- Personal Notes: > * Files named after the course title consist of notes taken during lectures. <br> Files labeled with "Notes" or "Review" represent systematic syntheses and summaries compiled during the revision phase.
+- Personal Notes: <br> Files named after the course title consist of notes taken during lectures. <br> Files labeled with "Notes" or "Review" represent systematic syntheses and summaries compiled during the revision phase.
 
 - Computational Modules: Source code and technical documentation required for laboratory or programming sessions.
 
