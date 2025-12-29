@@ -1,0 +1,40 @@
+Start primal active-set QP
+==================
+Start primal active-set QP
+x^0 = [1. 0.], W_0 = [] (non vertex boundary)
+
+Iter 0: x = [1. 0.], W = []
+         p = [2. 2.], alpha = 0.5
+Iter 1: p = 0, multipliers on W = [2.]
+All multipliers nonnegative, KKT satisfied, stop.
+
+Optimal x (for min q) = [2. 1.]
+Objective q(x*) = -11.0
+Original max f(x*) = 11.0
+==================
+x^0 = [2. 0.], W_0 = [] (vertex)
+
+Iter 0: x = [2. 0.], W = []
+         p = [1. 2.], alpha = 0.3333
+Iter 1: x = [2.333333 0.666667], W = [0]
+         p = [-0.333333  0.333333], alpha = 1
+Iter 2: p = 0, multipliers on W = [2.]
+All multipliers nonnegative, KKT satisfied, stop.
+
+Optimal x (for min q) = [2. 1.]
+Objective q(x*) = -11.0
+Original max f(x*) = 11.0
+=================
+Start primal active-set QP
+x^0 = [0.333333 0.333333], W_0 = [] (interior)
+
+Iter 0: x = [0.333333 0.333333], W = []
+         p = [2.666667 1.666667], alpha = 0.5385
+Iter 1: x = [1.769231 1.230769], W = [0]
+         p = [ 0.230769 -0.230769], alpha = 1
+Iter 2: p = 0, multipliers on W = [2.]
+All multipliers nonnegative, KKT satisfied, stop.
+
+Optimal x (for min q) = [2. 1.]
+Objective q(x*) = -11.0
+Original max f(x*) = 11.0
