@@ -1,6 +1,6 @@
 # Undergraduate course materials for Applied Math Students at HIT
 
-This repository constitutes a comprehensive archive of specialized course materials throughout my undergraduate tenure. It is intended to serve as a pedagogical reference for prospective mathematics students, with a particular focus on those enrolled in the HIT-SPbSU (Harbin Institute of Technology and Saint Petersburg State University) Joint Excellence Program.
+This repository constitutes a comprehensive archive of specialized course materials throughout my undergraduate tenure. It is intended to serve as a pedagogical reference for prospective mathematics students, with a particular focus on those enrolled in the HIT-SPbU (Harbin Institute of Technology and Saint Petersburg State University) Joint Excellence Program.
 
 Any contributions, such as supplementary notes or constructive suggestions, are sincerely welcomed. Furthermore, should you encounter any errors or oversights within these materials, I would be most grateful if you could bring them to my attention via the following email address: `kieran_liky AT 163 DOT com`
 
@@ -38,7 +38,7 @@ I would like to express my sincere gratitude to all the instructors and professo
 
 - Faculty of Harbin Institute of Technology (HIT): <br> Prof. YAO Chao, Prof. YUAN Lamei, Prof. YUAN Chengxun, Prof. YING Tao
 
-- Faculty of Saint Petersburg State University (SPbSU): <br> Prof. Lebedeva Elena, Prof. Demchenko Oleg, Prof. Konstantin Pimenov, Prof. Victor Katz
+- Faculty of Saint Petersburg State University (SPbU): <br> Prof. Lebedeva Elena, Prof. Demchenko Oleg, Prof. Konstantin Pimenov, Prof. Victor Katz
 , Prof. Olga Kunova, Prof. Aleksandr Rotkevich, Prof. Aleksei Savelev, Prof. David Kumallagov, Prof. Nikita Begun, Prof. Nikolai Krivulin, Prof. Saitova Regina, Prof. Kuzmin Alexander, Prof. Olga Semenova, Prof. Ilia Ragozin, Prof. Yury Andreev, Prof. Petr Shpilev, Prof. Ivanov Aleksei
 
 - Colleagues & Peers:
