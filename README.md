@@ -36,7 +36,7 @@ For each course, the following resources are typically provided:
 
 I would like to express my sincere gratitude to all the instructors and professors for their insightful lectures and guidance. My thanks also extend to the colleagues who have provided valuable support and suggestions for the development of this repository.
 
-- Faculty of Harbin Institute of Technology (HIT): <br> Prof. YAO Chao, Prof. YUAN Lamei, Prof. YUAN Chengxun, Prof. YING Tao
+- Faculty of Harbin Institute of Technology (HIT): <br> Prof. YOU Chao, Prof. YUAN Lamei, Prof. YUAN Chengxun, Prof. YING Tao
 
 - Faculty of Saint Petersburg State University (SPbU): <br> Prof. Lebedeva Elena, Prof. Demchenko Oleg, Prof. Konstantin Pimenov, Prof. Victor Katz
 , Prof. Olga Kunova, Prof. Aleksandr Rotkevich, Prof. Aleksei Savelev, Prof. David Kumallagov, Prof. Nikita Begun, Prof. Nikolai Krivulin, Prof. Saitova Regina, Prof. Kuzmin Alexander, Prof. Olga Semenova, Prof. Ilia Ragozin, Prof. Yury Andreev, Prof. Petr Shpilev, Prof. Ivanov Aleksei
