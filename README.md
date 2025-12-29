@@ -39,6 +39,6 @@ I would like to express my sincere gratitude to all the instructors and professo
 - Faculty of Harbin Institute of Technology (HIT): <br> Prof. YAO Chao, Prof. YUAN Lamei, Prof. YUAN Chengxun, Prof. YING Tao
 
 - Faculty of Saint Petersburg State University (SPbSU): <br> Prof. Lebedeva Elena, Prof. Demchenko Oleg, Prof. Konstantin Pimenov, Prof. Victor Katz
-, Prof. Olga Kunova, Prof. Aleksandr Rotkevich, Prof. Aleksei Savelev, Prof. David Kumallagov, Prof. Nikita Begun, Prof. Saitova Regina, Prof. Kuzmin Alexander, Prof. Olga Semenova, Prof. Ilia Ragozin, Prof. Petr Shpilev, Prof. Ivanov Aleksei
+, Prof. Olga Kunova, Prof. Aleksandr Rotkevich, Prof. Aleksei Savelev, Prof. David Kumallagov, Prof. Nikita Begun, Prof. Nikolai Krivulin, Prof. Saitova Regina, Prof. Kuzmin Alexander, Prof. Olga Semenova, Prof. Ilia Ragozin, Prof. Yury Andreev, Prof. Petr Shpilev, Prof. Ivanov Aleksei
 
 - Colleagues & Peers:
