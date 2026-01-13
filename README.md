@@ -6,7 +6,9 @@ Any contributions, such as supplementary notes or constructive suggestions, are 
 
 ## Who need this
 
-This repository is intended as a resource for students seeking to achieve academic excellence or to streamline their examination preparation within the HIT-SPbSU Joint Program. Furthermore, it serves as a comparative reference for mathematics scholars interested in exploring the pedagogical nuances and curriculum disparities between the Russian and Chinese traditions of undergraduate mathematical education.
+This repository is intended as a resource for students seeking to achieve academic excellence or to streamline their examination preparation within the HIT-SPbU Joint Program. Furthermore, it serves as a comparative reference for mathematics scholars interested in exploring the pedagogical nuances and curriculum disparities between the Russian and Chinese traditions of undergraduate mathematical education.
+
+*Note: The materials contained in this repository are primarily foundational in nature. Consequently, they may offer limited utility for advanced scholars or those seeking in-depth specialized research beyond the core undergraduate curriculum.*
 
 ## Contents of Each Course
 
@@ -16,7 +18,7 @@ For each course, the following resources are typically provided:
 
 - Home Assignments and Solutions: Problem sets with detailed solutions, either typeset in LaTeX or handwritten by the author.
 
-- Personal Notes: <br> Files named after the course title consist of notes taken during lectures. <br> Files labeled with "Notes" or "Review" represent systematic syntheses and summaries compiled during the revision phase.
+- Personal Notes: <br> Files named after the course title consist of notes taken during lectures. Most of them feature structured tables of contents. You can utilize the bookmark functionality within your PDF reader. <br> Files labeled with "Notes" or "Review" represent systematic syntheses and summaries compiled during the revision phase.
 
 - Computational Modules: Source code and technical documentation required for laboratory or programming sessions.
 
