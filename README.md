@@ -1,46 +1,49 @@
-# Undergraduate course materials for Applied Math Students at HIT
+# Undergraduate Course Materials for Applied Math Students at HIT
 
-This repository constitutes a comprehensive archive of specialized course materials throughout my undergraduate tenure. It is intended to serve as a pedagogical reference for prospective mathematics students, with a particular focus on those enrolled in the HIT-SPbU (Harbin Institute of Technology and Saint Petersburg State University) Joint Excellence Program.
+This repository is a collection of the course materials I’ve gathered throughout my undergraduate years. I hope it can be a helpful reference for fellow math students, especially those in the **HIT-SPbU (Harbin Institute of Technology and Saint Petersburg State University) Joint Program**.
 
-Any contributions, such as supplementary notes or constructive suggestions, are sincerely welcomed. Furthermore, should you encounter any errors or oversights within these materials, I would be most grateful if you could bring them to my attention via the following email address: `kieran_liky AT 163 DOT com`
+If you have any notes to add or suggestions to make, I’d love to hear them! Also, since these are personal records, there might be some mistakes or oversights—if you spot any, please let me know at: `kieran_liky AT 163 DOT com`
 
-## Who need this
+---
 
-This repository is intended as a resource for students seeking to achieve academic excellence or to streamline their examination preparation within the HIT-SPbU Joint Program. Furthermore, it serves as a comparative reference for mathematics scholars interested in exploring the pedagogical nuances and curriculum disparities between the Russian and Chinese traditions of undergraduate mathematical education.
+## A quick note
+This repository actually started as a way to pass the time during my bouts of insomnia. It’s grown quite a bit since then, though you’ll notice the materials from my earlier years aren’t nearly as polished. My note-taking back then was a bit rough, so you might run into some messy parts or mistakes. Honestly, I don't have the time to go back and tidy everything up now, so please just take them as they are.
 
-*Note: The materials contained in this repository are primarily foundational in nature. Consequently, they may offer limited utility for advanced scholars or those seeking in-depth specialized research beyond the core undergraduate curriculum.*
+## Who is this for?
+This repository is for anyone in the HIT-SPbU Joint Program looking to strengthen their understanding or just trying to survive finals week. It might also be interesting for those who want to see the differences (and the "pedagogical nuances," if we’re being fancy) between the Russian and Chinese traditions of math education.
 
-## Contents of Each Course
+> **Note:** Most of these materials are foundational. If you’re already an advanced scholar looking for deep, specialized research, these might be a bit too basic for you.
 
-For each course, the following resources are typically provided:
+## What’s inside?
+For most courses, you’ll find:
 
-- Lecture Notes/Slides: Official instructional materials provided by the instructors.
-
-- Home Assignments and Solutions: Problem sets with detailed solutions, either typeset in LaTeX or handwritten by the author.
-
-- Personal Notes: <br> Files named after the course title consist of notes taken during lectures. Most of them feature structured tables of contents. You can utilize the bookmark functionality within your PDF reader. <br> Files labeled with "Notes" or "Review" represent systematic syntheses and summaries compiled during the revision phase.
-
-- Computational Modules: Source code and technical documentation required for laboratory or programming sessions.
-
-- Course Syllabi & Topic Lists: Comprehensive content checklists provided by instructors, serving as a formal reference for final examinations.
-
-- *References: To respect intellectual property rights, external textbooks are generally excluded unless they serve as the primary lecture notes. For inquiries regarding recommended readings or electronic resources, please contact the author directly.*
+* **Lecture Notes/Slides:** Official materials from the instructors.
+* **Assignments and Solutions:** Problem sets with solutions I either typeset in **LaTeX** or scribbled by hand.
+* **Personal Notes:** * Files named after the **course title** are my in-class notes. Most have a table of contents, so you can use the **bookmark** feature in your PDF reader to jump around.
+    * Files labeled **"Notes"** or **"Review"** are my personal summaries from when I was cramming for exams.
+* **Computational Modules:** Code and docs for the lab sessions.
+* **Syllabi & Topic Lists:** The "checklists" provided by teachers to help us prepare for finals.
+* **Mind Maps:** In some folders, you’ll find mind maps I scrambled to put together during finals week. They're great for getting the **overall logic** down quickly—perfect for a quick review before you dive into the details.
+* ***References:** To respect copyright, I haven't included textbooks unless they were the actual handouts. If you need book recommendations or e-resources, feel free to ask me.*
 
 ## Important Notes & Disclaimers
-
-- Completeness: Due to temporal constraints, certain course materials may be incomplete. Contributions from the community to fill these gaps are highly encouraged and appreciated.
-
-- Language Consistency: Please note that the resources are documented in a mixture of Chinese and English (maybe even Russian). The choice of language was dictated by the author's convenience and the context of the discourse at the time, rather than any pedagogical preference.
-
-- Curriculum Evolution: As the author belongs to the inaugural cohort of this joint program, the curriculum may still be in an exploratory phase. Prospective students should be aware that course content may evolve over time; therefore, these materials should be used as a supplementary reference rather than an absolute guide.
+* **About Completeness:** Since I was juggling a lot of coursework, I couldn't always keep everything organized—so you might find some files missing. If you happen to have any of those missing materials and are willing to share, I'd be super grateful!
+* **On Language:** You’ll see a mix of Chinese, English, and maybe some Russian. It basically depended on how I was feeling or what was easiest to jot down at the time. I know it’s a bit messy, so thanks for bearing with me.
+* **Things Change:** Being in the very first group of this program, I was kind of a **"guinea pig"** and we were all just figuring things out. The courses have probably evolved since then, so please don't take my notes as the absolute truth—they’re just how I personally understood things at the time.
 
 ## Acknowledgements
+I’m sincerely grateful to all the professors for their lectures and guidance. Also, a big thanks to my classmates who helped build this repository with their support and advice.
 
-I would like to express my sincere gratitude to all the instructors and professors for their insightful lectures and guidance. My thanks also extend to the colleagues who have provided valuable support and suggestions for the development of this repository.
+**Faculty of HIT:**
+* Prof. YOU Chao, Prof. YUAN Lamei, Prof. YUAN Chengxun, Prof. YING Tao
 
-- Faculty of Harbin Institute of Technology (HIT): <br> Prof. YOU Chao, Prof. YUAN Lamei, Prof. YUAN Chengxun, Prof. YING Tao
+**Faculty of SPbU:**
+* Prof. Lebedeva Elena, Prof. Demchenko Oleg, Prof. Konstantin Pimenov, Prof. Victor Katz, Prof. Olga Kunova, Prof. Aleksandr Rotkevich, Prof. Aleksei Savelev, Prof. David Kumallagov, Prof. Nikita Begun, Prof. Nikolai Krivulin, Prof. Saitova Regina, Prof. Kuzmin Alexander, Prof. Olga Semenova, Prof. Ilia Ragozin, Prof. Yury Andreev, Prof. Petr Shpilev, Prof. Ivanov Aleksei
 
-- Faculty of Saint Petersburg State University (SPbU): <br> Prof. Lebedeva Elena, Prof. Demchenko Oleg, Prof. Konstantin Pimenov, Prof. Victor Katz
-, Prof. Olga Kunova, Prof. Aleksandr Rotkevich, Prof. Aleksei Savelev, Prof. David Kumallagov, Prof. Nikita Begun, Prof. Nikolai Krivulin, Prof. Saitova Regina, Prof. Kuzmin Alexander, Prof. Olga Semenova, Prof. Ilia Ragozin, Prof. Yury Andreev, Prof. Petr Shpilev, Prof. Ivanov Aleksei
+**My classmates from HIT:**
 
-- Colleagues & Peers:
+
+---
+<p align="center">
+    <big><strong><em>STILL UNDER CONSTRUCTION ......</em></strong></big>
+</p>
