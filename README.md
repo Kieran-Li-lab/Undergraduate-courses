@@ -41,7 +41,9 @@ I’m sincerely grateful to all the professors for their lectures and guidance. 
 * Prof. Lebedeva Elena, Prof. Demchenko Oleg, Prof. Konstantin Pimenov, Prof. Victor Katz, Prof. Olga Kunova, Prof. Aleksandr Rotkevich, Prof. Aleksei Savelev, Prof. David Kumallagov, Prof. Nikita Begun, Prof. Nikolai Krivulin, Prof. Saitova Regina, Prof. Kuzmin Alexander, Prof. Olga Semenova, Prof. Ilia Ragozin, Prof. Yury Andreev, Prof. Petr Shpilev, Prof. Ivanov Aleksei
 
 **My classmates from HIT:**
-
+name | e-address | aka
+---- | ---- | ----
+Jiahe Wang | chriswangjh@qq.com | Linfeng Qu's father
 
 ---
 <p align="center">
