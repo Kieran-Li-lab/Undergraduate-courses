@@ -6,8 +6,8 @@ If you have any notes to add or suggestions to make, We’d love to hear them! A
 
 Author | e-address | aka
 ---- | ---- | ----
-Kaiyan LI | `kieran_liky AT 163 DOT com` | ---
 Jiahe Wang | `chriswangjh AT qq DOT com` | Linfeng Qu's father
+Kaiyan LI | `kieran_liky AT 163 DOT com` | ---
 ---
 
 
@@ -47,7 +47,8 @@ We're sincerely grateful to all the professors for their lectures and guidance. 
 **Faculty of SPbU:**
 * Prof. Lebedeva Elena, Prof. Demchenko Oleg, Prof. Konstantin Pimenov, Prof. Victor Katz, Prof. Olga Kunova, Prof. Aleksandr Rotkevich, Prof. Aleksei Savelev, Prof. David Kumallagov, Prof. Nikita Begun, Prof. Nikolai Krivulin, Prof. Saitova Regina, Prof. Kuzmin Alexander, Prof. Olga Semenova, Prof. Ilia Ragozin, Prof. Yury Andreev, Prof. Petr Shpilev, Prof. Ivanov Aleksei
 
-**Our classmates from HIT:**
+**My classmates from HIT:**
+
 
 <p align="center">
     <big><strong><em>STILL UNDER CONSTRUCTION ......</em></strong></big>
