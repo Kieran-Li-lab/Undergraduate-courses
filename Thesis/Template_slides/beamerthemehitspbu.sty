@@ -1,0 +1,254 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerthemehitspbu}[2026/05/20 HIT-SPBU beamer theme]
+
+\mode<presentation>
+
+\RequirePackage{tikz}
+\RequirePackage{graphicx}
+\RequirePackage{fontspec}
+\usetikzlibrary{calc}
+
+% Overleaf may keep an old output.aux from a previous biblatex document.
+% These no-op fallbacks let the next run clear stale biblatex aux commands.
+\makeatletter
+\providecommand{\abx@aux@refcontext}[1]{}
+\providecommand{\abx@aux@cite}[2]{}
+\providecommand{\abx@aux@segm}[4]{}
+\providecommand{\abx@aux@read@bbl@mdfivesum}[1]{}
+\providecommand{\abx@aux@defaultrefcontext}[3]{}
+\makeatother
+
+\definecolor{HITRed}{RGB}{159,41,29}
+\definecolor{HITRedDark}{RGB}{151,35,27}
+\definecolor{HITSlate}{RGB}{93,109,113}
+\definecolor{HITLineGrey}{RGB}{194,201,202}
+\definecolor{HITBlockBody}{RGB}{246,246,246}
+\providecommand{\hitsupervisor}{}
+
+\newfontfamily\hitFrameTitleFace{Carlito}[
+  Extension=.ttf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  ItalicFont=*-Italic,
+  BoldItalicFont=*-BoldItalic
+]
+
+% Title-page controls. Override these in the main .tex preamble after \usetheme.
+\newlength{\hitTitlePageTitleX}
+\newlength{\hitTitlePageTitleY}
+\newlength{\hitTitlePageAuthorX}
+\newlength{\hitTitlePageAuthorY}
+\newlength{\hitTitlePageSupervisorX}
+\newlength{\hitTitlePageSupervisorY}
+\newlength{\hitTitlePageFooterX}
+\newlength{\hitTitlePageFooterY}
+\newlength{\hitTitlePageSpbuLogoX}
+\newlength{\hitTitlePageSpbuLogoWidth}
+\newlength{\hitTitlePageHitLogoWidth}
+\setlength{\hitTitlePageTitleX}{0cm}
+\setlength{\hitTitlePageTitleY}{1.48cm}
+\setlength{\hitTitlePageAuthorX}{-0.92cm}
+\setlength{\hitTitlePageAuthorY}{-0.82cm}
+\setlength{\hitTitlePageSupervisorX}{-0.92cm}
+\setlength{\hitTitlePageSupervisorY}{-1.42cm}
+\setlength{\hitTitlePageFooterX}{0cm}
+\setlength{\hitTitlePageFooterY}{0.76cm}
+\setlength{\hitTitlePageSpbuLogoX}{-0.54cm}
+\setlength{\hitTitlePageSpbuLogoWidth}{4.75cm}
+\setlength{\hitTitlePageHitLogoWidth}{4.65cm}
+
+\providecommand{\hitTitlePageTitleBase}{current page.center}
+\providecommand{\hitTitlePageAuthorBase}{current page.east}
+\providecommand{\hitTitlePageSupervisorBase}{current page.east}
+\providecommand{\hitTitlePageFooterBase}{current page.south}
+
+\providecommand{\hitTitlePageTitleAnchor}{center}
+\providecommand{\hitTitlePageAuthorAnchor}{east}
+\providecommand{\hitTitlePageSupervisorAnchor}{east}
+\providecommand{\hitTitlePageFooterAnchor}{center}
+
+\providecommand{\hitTitlePageTitleAlign}{center}
+\providecommand{\hitTitlePageAuthorAlign}{right}
+\providecommand{\hitTitlePageSupervisorAlign}{right}
+\providecommand{\hitTitlePageFooterAlign}{center}
+
+\providecommand{\hitTitlePageTitleWidth}{0.96\paperwidth}
+\providecommand{\hitTitlePageAuthorWidth}{0.70\paperwidth}
+\providecommand{\hitTitlePageSupervisorWidth}{0.70\paperwidth}
+\providecommand{\hitTitlePageFooterWidth}{0.78\paperwidth}
+
+\providecommand{\hitTitlePageTitleFont}{\rmfamily\bfseries\fontsize{15}{19}\selectfont}
+\providecommand{\hitTitlePageAuthorFont}{\rmfamily\bfseries\fontsize{12.5}{15}\selectfont}
+\providecommand{\hitTitlePageSupervisorFont}{\rmfamily\bfseries\fontsize{12.5}{15}\selectfont}
+\providecommand{\hitTitlePageFooterFont}{\rmfamily\fontsize{8.7}{10.2}\selectfont}
+\providecommand{\hitFrameTitleFont}{\hitFrameTitleFace\fontsize{20}{24}\selectfont}
+
+% Shared horizontal span for the header rule, footer band, logo, and footer text.
+\newlength{\hitWritableLeft}
+\newlength{\hitWritableRight}
+\newlength{\hitFrameTitleLeft}
+\newlength{\hitFrameTitleRight}
+\newlength{\hitFrameTitleY}
+\setlength{\hitWritableLeft}{0.46cm}
+\setlength{\hitWritableRight}{0.05cm}
+\setlength{\hitFrameTitleLeft}{5.10cm}
+\setlength{\hitFrameTitleRight}{2.20cm}
+\setlength{\hitFrameTitleY}{-0.66cm}
+
+\useinnertheme[shadow=false]{rounded}
+\useoutertheme{default}
+\usecolortheme{default}
+
+\setbeamersize{text margin left=0.58cm,text margin right=0.58cm}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{bibliography item}[text]
+
+\setbeamercolor{normal text}{fg=black,bg=white}
+\setbeamercolor{structure}{fg=HITRed}
+\setbeamercolor{alerted text}{fg=HITRed}
+\setbeamercolor{title}{fg=HITSlate}
+\setbeamercolor{subtitle}{fg=HITSlate}
+\setbeamercolor{frametitle}{fg=HITSlate}
+\setbeamercolor{block title}{fg=white,bg=HITRed}
+\setbeamercolor{block body}{fg=black,bg=HITBlockBody}
+\setbeamercolor{block title alerted}{fg=white,bg=HITRedDark}
+\setbeamercolor{block body alerted}{fg=black,bg=HITBlockBody}
+\setbeamercolor{block title example}{fg=white,bg=HITSlate}
+\setbeamercolor{block body example}{fg=black,bg=HITBlockBody}
+\setbeamercolor{footline}{fg=HITSlate,bg=}
+
+\setbeamerfont{title}{family=\rmfamily,series=\bfseries,size=\Large}
+\setbeamerfont{author}{family=\rmfamily,series=\bfseries,size=\large}
+\setbeamerfont{institute}{size=\small}
+\setbeamerfont{date}{size=\small}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamerfont{block title}{series=\bfseries}
+
+\makeatletter
+\setbeamertemplate{background canvas}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \ifbeamer@plainframe
+      \fill[white] (current page.south west) rectangle (current page.north east);
+    \else
+      \node[anchor=center,inner sep=0pt] at (current page.center)
+        {\includegraphics[width=\paperwidth,height=\paperheight]{hit-template-assets/body-background.jpeg}};
+      \fill[white] ([yshift=-1.16cm]current page.north west)
+        rectangle ([yshift=-1.42cm]current page.north east);
+      \coordinate (hitLineTopLeft) at ([xshift=\hitWritableLeft,yshift=-1.26cm]current page.north west);
+      \coordinate (hitLineBottomLeft) at ([xshift=\hitWritableLeft,yshift=-1.34cm]current page.north west);
+      \coordinate (hitLineTopRight) at ([xshift=-\hitWritableRight,yshift=-1.26cm]current page.north east);
+      \coordinate (hitLineBottomRight) at ([xshift=-\hitWritableRight,yshift=-1.34cm]current page.north east);
+      \fill[HITRed] (hitLineTopLeft) rectangle ($(hitLineBottomLeft)!0.31!(hitLineBottomRight)$);
+      \fill[HITLineGrey] ($(hitLineTopLeft)!0.31!(hitLineTopRight)$) rectangle ($(hitLineBottomLeft)!0.34!(hitLineBottomRight)$);
+      \fill[HITSlate] ($(hitLineTopLeft)!0.34!(hitLineTopRight)$) rectangle ($(hitLineBottomLeft)!0.43!(hitLineBottomRight)$);
+      \fill[HITLineGrey] ($(hitLineTopLeft)!0.43!(hitLineTopRight)$) rectangle ($(hitLineBottomLeft)!0.52!(hitLineBottomRight)$);
+      \fill[HITRed] ($(hitLineTopLeft)!0.52!(hitLineTopRight)$) rectangle ($(hitLineBottomLeft)!0.57!(hitLineBottomRight)$);
+      \fill[HITLineGrey] ($(hitLineTopLeft)!0.57!(hitLineTopRight)$) rectangle (hitLineBottomRight);
+      \fill[HITRed] ([xshift=\hitWritableLeft,yshift=0.38cm]current page.south west)
+        rectangle ([xshift=-\hitWritableRight,yshift=0.93cm]current page.south east);
+    \fi
+  \end{tikzpicture}%
+}
+\makeatother
+
+\makeatletter
+\setbeamertemplate{frametitle}{%
+  \ifbeamer@plainframe%
+  \else%
+    \nointerlineskip%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=north west,inner sep=0pt] at ([xshift=\hitWritableLeft,yshift=-0.13cm]current page.north west)
+        {\includegraphics[width=4.55cm]{hit-template-assets/hit-logo-slate.png}};
+      \node[anchor=center,text=HITRed,align=center,text width=\dimexpr\paperwidth-\hitFrameTitleLeft-\hitFrameTitleRight\relax,font=\hitFrameTitleFont]
+        at ($([xshift=\hitFrameTitleLeft,yshift=\hitFrameTitleY]current page.north west)!0.5!([xshift=-\hitFrameTitleRight,yshift=\hitFrameTitleY]current page.north east)$) {\insertframetitle};
+    \end{tikzpicture}%
+    \vspace{0.98cm}%
+  \fi%
+}
+\makeatother
+
+\setbeamertemplate{title page}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[white] (current page.south west) rectangle (current page.north east);
+    \fill[HITRed] (current page.north west) rectangle ([yshift=-1.22cm]current page.north east);
+    \coordinate (hitTitleLineTopLeft) at ([yshift=-1.25cm]current page.north west);
+    \coordinate (hitTitleLineBottomLeft) at ([yshift=-1.33cm]current page.north west);
+    \coordinate (hitTitleLineTopRight) at ([yshift=-1.25cm]current page.north east);
+    \coordinate (hitTitleLineBottomRight) at ([yshift=-1.33cm]current page.north east);
+    \fill[HITRed] (hitTitleLineTopLeft) rectangle ($(hitTitleLineBottomLeft)!0.31!(hitTitleLineBottomRight)$);
+    \fill[HITLineGrey] ($(hitTitleLineTopLeft)!0.31!(hitTitleLineTopRight)$) rectangle ($(hitTitleLineBottomLeft)!0.34!(hitTitleLineBottomRight)$);
+    \fill[HITSlate] ($(hitTitleLineTopLeft)!0.34!(hitTitleLineTopRight)$) rectangle ($(hitTitleLineBottomLeft)!0.43!(hitTitleLineBottomRight)$);
+    \fill[HITLineGrey] ($(hitTitleLineTopLeft)!0.43!(hitTitleLineTopRight)$) rectangle ($(hitTitleLineBottomLeft)!0.52!(hitTitleLineBottomRight)$);
+    \fill[HITRed] ($(hitTitleLineTopLeft)!0.52!(hitTitleLineTopRight)$) rectangle ($(hitTitleLineBottomLeft)!0.57!(hitTitleLineBottomRight)$);
+    \fill[HITLineGrey] ($(hitTitleLineTopLeft)!0.57!(hitTitleLineTopRight)$) rectangle (hitTitleLineBottomRight);
+    \node[anchor=west,inner sep=0pt] at ([xshift=\hitTitlePageSpbuLogoX,yshift=-0.61cm]current page.north west)
+      {\includegraphics[width=\hitTitlePageSpbuLogoWidth]{hit-template-assets/spbu-logo-white.png}};
+    \node[anchor=east,inner sep=0pt] at ([xshift=-0.35cm,yshift=-0.61cm]current page.north east)
+      {\includegraphics[width=\hitTitlePageHitLogoWidth]{hit-template-assets/hit-logo-white.png}};
+    \fill[HITRed] ([yshift=0.40cm]current page.south west)
+      rectangle ([yshift=1.14cm]current page.south east);
+
+    \node[anchor=\hitTitlePageTitleAnchor,text=HITSlate,
+      align=\hitTitlePageTitleAlign,text width=\hitTitlePageTitleWidth,
+      font=\hitTitlePageTitleFont]
+      at ([xshift=\hitTitlePageTitleX,yshift=\hitTitlePageTitleY]\hitTitlePageTitleBase)
+      {\inserttitle};
+
+    \node[anchor=\hitTitlePageAuthorAnchor,text=HITSlate,
+      align=\hitTitlePageAuthorAlign,text width=\hitTitlePageAuthorWidth,
+      font=\hitTitlePageAuthorFont]
+      at ([xshift=\hitTitlePageAuthorX,yshift=\hitTitlePageAuthorY]\hitTitlePageAuthorBase)
+      {\insertauthor};
+
+    \node[anchor=\hitTitlePageSupervisorAnchor,text=HITSlate,
+      align=\hitTitlePageSupervisorAlign,text width=\hitTitlePageSupervisorWidth,
+      font=\hitTitlePageSupervisorFont]
+      at ([xshift=\hitTitlePageSupervisorX,yshift=\hitTitlePageSupervisorY]\hitTitlePageSupervisorBase)
+      {Supervisor:\quad \hitsupervisor};
+
+    \node[anchor=\hitTitlePageFooterAnchor,text=white,
+      align=\hitTitlePageFooterAlign,text width=\hitTitlePageFooterWidth,
+      font=\hitTitlePageFooterFont]
+      at ([xshift=\hitTitlePageFooterX,yshift=\hitTitlePageFooterY]\hitTitlePageFooterBase)
+      {\insertinstitute\\[0.25ex]\insertdate};
+  \end{tikzpicture}%
+}
+
+\makeatletter
+\setbeamertemplate{footline}{%
+  \ifnum\value{framenumber}=1\relax%
+  \else%
+    \ifbeamer@plainframe%
+    \else%
+      \begin{beamercolorbox}[wd=\paperwidth,ht=0.28cm,dp=0.08cm,leftskip=\hitWritableLeft,rightskip=\hitWritableRight]{footline}
+        {\fontsize{5.8}{6.8}\selectfont
+        \makebox[0.70\paperwidth][l]{\insertshorttitle}%
+        \hfill
+        \makebox[0.10\paperwidth][r]{\insertframenumber/\inserttotalframenumber}}%
+      \end{beamercolorbox}%
+    \fi%
+  \fi%
+}
+\makeatother
+
+\newenvironment{hitfullframe}[1][]{%
+  \begin{frame}[plain,#1]%
+}{%
+  \end{frame}%
+}
+
+\newcommand{\hitItemizeBullet}{\raisebox{0.18ex}{\textcolor{HITRed}{\tiny$\circ$}}}
+\setbeamertemplate{itemize item}{\hitItemizeBullet}
+\setbeamertemplate{itemize subitem}{\raise0.15ex\hbox{\tiny$\blacktriangleright$}}
+\setbeamertemplate{enumerate item}{\color{HITRed}\insertenumlabel.}
+
+\makeatletter
+\AtBeginDocument{%
+  \@ifpackageloaded{enumitem}{%
+    \setlist[itemize,1]{label=\hitItemizeBullet,left=0pt..1em}%
+  }{}%
+}
+\makeatother
+\AtBeginDocument{\usebeamercolor[fg]{normal text}}
+
+\mode<all>

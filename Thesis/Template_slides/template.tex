@@ -1,0 +1,170 @@
+% !TeX program = xelatex
+\documentclass[aspectratio=169]{beamer}
+
+% The theme file beamerthemehitspbu.sty must be in the same folder as this tex.
+\usetheme{hitspbu}
+\usefonttheme{professionalfonts}
+
+% Common packages for mathematical and technical presentations.
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{booktabs, tabularx, array}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\usepackage{enumitem}
+\setlist[itemize]{left=0pt..1em}
+
+% Optional helper macros.
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% Metadata. Replace these placeholders with your own information.
+\title[Short Presentation Title]{Full Presentation Title\\Second Title Line If Needed}
+\author[Presenter]{Presenter Name}
+\renewcommand{\hitsupervisor}{Supervisor Name}
+\institute[Short Institute]{Department or School, University Name}
+\date{Month Day, Year}
+
+% Optional title-page controls. Uncomment and adjust when needed.
+% \setlength{\hitTitlePageTitleY}{1.40cm}
+% \setlength{\hitTitlePageAuthorX}{-0.92cm}
+% \setlength{\hitTitlePageAuthorY}{-0.82cm}
+% \setlength{\hitTitlePageSupervisorY}{-1.42cm}
+% \renewcommand{\hitTitlePageAuthorAlign}{right}
+% \renewcommand{\hitTitlePageAuthorAnchor}{east}
+% \renewcommand{\hitTitlePageAuthorBase}{current page.east}
+
+% Optional body-page title controls.
+% \setlength{\hitFrameTitleLeft}{5.10cm}
+% \setlength{\hitFrameTitleRight}{2.20cm}
+% \setlength{\hitFrameTitleY}{-0.66cm}
+% \renewcommand{\hitFrameTitleFont}{\hitFrameTitleFace\fontsize{20}{24}\selectfont}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Contents}
+  \tableofcontents
+\end{frame}
+
+\section{Basic Content}
+
+\begin{frame}{Itemize and Blocks}
+\begin{block}{Standard Block}
+Use the usual Beamer environments. The first-level item marker is a small hollow circle.
+\end{block}
+
+\begin{itemize}
+  \item First point with a concise statement.
+  \item Second point with a short explanation.
+  \item Third point with a displayed equation:
+  \[
+    \min_{x\in\RR^d} f(x)+g(Bx).
+  \]
+\end{itemize}
+
+\begin{alertblock}{Alert Block}
+Use alert blocks for assumptions, warnings, or key conditions.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Columns}
+\begin{columns}[T,onlytextwidth]
+\column{0.48\textwidth}
+\begin{block}{Left Column}
+\begin{itemize}
+  \item Model setup.
+  \item Main assumptions.
+  \item Notation.
+\end{itemize}
+\end{block}
+
+\column{0.48\textwidth}
+\begin{exampleblock}{Right Column}
+\[
+  \E\|x_k-x^\star\|^2 \le C\rho^k.
+\]
+This block is useful for conclusions or examples.
+\end{exampleblock}
+\end{columns}
+\end{frame}
+
+\section{Structured Slides}
+
+\begin{frame}{Table}
+\centering
+\begin{tabularx}{0.78\textwidth}{@{}lYY@{}}
+\toprule
+Item & Description & Remark \\
+\midrule
+Method A & Deterministic baseline & Stable \\
+Method B & Stochastic variant & Scalable \\
+Method C & Accelerated method & Fast \\
+\bottomrule
+\end{tabularx}
+\end{frame}
+
+\begin{frame}{Figure Placeholder}
+\centering
+\begin{tikzpicture}
+  \draw[HITRed, line width=1pt, rounded corners=3pt] (0,0) rectangle (8.6,3.8);
+  \node[align=center, text=HITSlate] at (4.3,1.9)
+    {Replace this TikZ placeholder with\\\texttt{\textbackslash includegraphics[width=...]\{file-name\}}};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Theorem Style}
+\begin{theorem}
+Assume that $f$ is convex and $L$-smooth. Then a suitable first-order method satisfies
+\[
+  F(x_k)-F(x^\star) \le \mathcal{O}\left(\frac{1}{k}\right).
+\]
+\end{theorem}
+\begin{proof}
+State only the main proof idea on slides; keep technical details in backup pages.
+\end{proof}
+\end{frame}
+
+\section{Special Frames}
+
+\begin{frame}[plain]{Plain Frame}
+\centering
+This frame intentionally has no header and no footer.
+
+\vspace{1em}
+Use it for full-page figures, section breaks, or special transition pages.
+\end{frame}
+
+\begin{hitfullframe}
+\centering
+The custom \texttt{hitfullframe} environment is a shortcut for a plain full-content frame.
+\end{hitfullframe}
+
+\begin{frame}{Normal Frame After Plain}
+\begin{itemize}
+  \item The normal header, footer, and page number return automatically.
+  \item Use standard \texttt{frame} environments for most slides.
+\end{itemize}
+\end{frame}
+
+\appendix
+
+\begin{frame}[noframenumbering]{Backup Slide Not Counted}
+This slide keeps the template style, but it is not included in the total frame count.
+
+\[
+  \text{Displayed page numbers remain like } 1/20,\;2/20,\ldots,20/20.
+\]
+\end{frame}
+
+\begin{frame}[plain,noframenumbering]{Plain Backup Not Counted}
+\centering
+This backup slide has no header/footer and is also not counted.
+\end{frame}
+
+\end{document}

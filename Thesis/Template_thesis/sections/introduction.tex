@@ -1,0 +1,46 @@
+\chapter{Introduction}
+
+\section{Background}
+
+This chapter shows the basic document structure. A superscript numerical citation is produced by \verb|\cite|, for example \cite{sample-journal}. An inline citation is produced by \verb|\inlinecite|, for example \inlinecite{sample-book}.
+
+The first paragraph after a heading is indented. Equations are numbered by chapter, as shown in equation \eqref{eq:model-example}.
+\begin{equation}\label{eq:model-example}
+  \min_{x\in\mathbb{R}^{d}} F(x) := f(x)+g(Bx).
+\end{equation}
+
+\section{Figures and Tables}
+
+Figure \ref{fig:placeholder} shows a placeholder figure. Replace the framed box with \verb|\includegraphics| when a real figure file is available.
+\begin{figure}[htbp]
+  \centering
+  \fbox{\rule{0pt}{35mm}\rule{80mm}{0pt}}
+  \caption{A placeholder figure}
+  \label{fig:placeholder}
+\end{figure}
+
+Table \ref{tab:notation} shows a standard three-line table.
+\begin{table}[htbp]
+  \centering
+  \caption{Basic notation}
+  \label{tab:notation}
+  \begin{tabular}{ll}
+    \toprule
+    Symbol & Meaning \\
+    \midrule
+    $x$ & Primal variable \\
+    $y$ & Dual variable \\
+    $B$ & Linear operator \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Section Levels}
+
+\subsection{Subsection Example}
+
+This is a subsection. Its numbering follows the form 1.3.1.
+
+\subsubsection{Subsubsection Example}
+
+This is a subsubsection. Its numbering follows the form 1.3.1.1.
