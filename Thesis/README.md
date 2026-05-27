@@ -5,7 +5,7 @@ This folder contains two template projects:
 - `Template_thesis/`: undergraduate thesis template.
 - `Template_slides/`: Beamer slide template for thesis presentations.
 
-For opening reports and mid-term reports, it is recommended to refer to the official hithesis project: [hithesis/hithesis](https://github.com/hithesis/hithesis).
+For opening reports and mid-term reports, it is recommended to refer to the hithesis project: [hithesis/hithesis](https://github.com/hithesis/hithesis).
 
 ## Thesis Template
 
@@ -13,12 +13,6 @@ The thesis template entry file is:
 
 ```tex
 Template_thesis/template_thesis.tex
-```
-
-Compile with:
-
-```text
-XeLaTeX -> BibTeX -> XeLaTeX -> XeLaTeX
 ```
 
 On Overleaf, set the compiler to `XeLaTeX`. If references or the table of contents do not update after the first compilation, recompile several times.
