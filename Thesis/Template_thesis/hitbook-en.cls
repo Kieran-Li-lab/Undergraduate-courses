@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{hitbook-en}[2026/05/27 English thesis template class]
+\ProvidesClass{hitbook-en}[2026/04/21 English thesis class]
 
 \LoadClass[14pt,a4paper,oneside,openany]{extbook}
 
@@ -17,12 +17,14 @@
 \setCJKsansfont{FandolHei-Regular}
 
 \RequirePackage[a4paper,left=30mm,right=15mm,top=20mm,bottom=20mm,headheight=14pt,headsep=8pt]{geometry}
+% Body text uses the class 14pt size together with a 1.626 line spread.
 \linespread{1.626}\selectfont
 
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{amsthm}
 \RequirePackage{graphicx}
+\RequirePackage{pdfpages}
 \RequirePackage{booktabs}
 \RequirePackage{tabularx}
 \RequirePackage{array}
@@ -42,17 +44,6 @@
 \RequirePackage[sort&compress]{gbt7714}
 \RequirePackage{chngcntr}
 
-\newcommand{\thesisuniversity}{Harbin Institute of Technology}
-\newcommand{\thesistype}{Undergraduate Thesis}
-\newcommand{\thesistitle}{Thesis Title}
-\newcommand{\thesisauthor}{Author Name}
-\newcommand{\thesisstudentid}{Student ID}
-\newcommand{\thesisschool}{School Name}
-\newcommand{\thesismajor}{Major Name}
-\newcommand{\thesissupervisor}{Supervisor Name}
-\newcommand{\thesisdegree}{Bachelor Degree}
-\newcommand{\thesisdate}{Month Year}
-
 \hypersetup{
   colorlinks=true,
   linkcolor=black,
@@ -65,7 +56,7 @@
 \setlength{\parskip}{0pt}
 \setlist{nosep}
 \allowdisplaybreaks[4]
-
+% Keep displayed equations compact under the enlarged body line spread.
 \AtBeginDocument{%
   \setlength{\abovedisplayskip}{6pt plus 2pt minus 2pt}%
   \setlength{\belowdisplayskip}{6pt plus 2pt minus 2pt}%
@@ -84,14 +75,12 @@
 \captionsetup[table]{font={captiontwelve,singletablespacing},labelfont={bf,captiontwelve},labelsep=space}
 \setlength{\abovecaptionskip}{0.25\baselineskip}
 \setlength{\belowcaptionskip}{0pt}
-
 \renewcommand{\figurename}{Figure}
 \renewcommand{\tablename}{Table}
 \renewcommand{\contentsname}{Contents}
 \renewcommand{\bibname}{References}
 \renewcommand{\appendixname}{Appendix}
 \renewcommand{\chaptername}{Chapter}
-
 \counterwithin{figure}{chapter}
 \counterwithin{table}{chapter}
 \counterwithin{equation}{chapter}
@@ -100,7 +89,6 @@
 \renewcommand{\theequation}{\thechapter-\arabic{equation}}
 \newcounter{algorithm}[chapter]
 \renewcommand{\thealgorithm}{\thechapter.\arabic{algorithm}}
-
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
 \setlength{\cftbeforetoctitleskip}{0pt}
@@ -117,10 +105,10 @@
 \renewcommand{\cftsecpagefont}{\normalfont\fontsize{14pt}{17pt}\selectfont}
 \renewcommand{\cftsubsecfont}{\normalfont\fontsize{14pt}{17pt}\selectfont}
 \renewcommand{\cftsubsecpagefont}{\normalfont\fontsize{14pt}{17pt}\selectfont}
-\renewcommand{\cftchapafterpnum}{\vadjust{\vskip -2.5pt}}
-\renewcommand{\cftsecafterpnum}{\vadjust{\vskip -2.5pt}}
-\renewcommand{\cftsubsecafterpnum}{\vadjust{\vskip -2.5pt}}
-\renewcommand{\cftsubsubsecafterpnum}{\vadjust{\vskip -2.5pt}}
+\renewcommand{\cftchapafterpnum}{\vadjust{\vskip -2.8pt}}
+\renewcommand{\cftsecafterpnum}{\vadjust{\vskip -2.8pt}}
+\renewcommand{\cftsubsecafterpnum}{\vadjust{\vskip -2.8pt}}
+\renewcommand{\cftsubsubsecafterpnum}{\vadjust{\vskip -2.8pt}}
 
 \titleformat{\chapter}[block]
   {\normalfont\bfseries\fontsize{20pt}{30pt}\selectfont}
@@ -223,7 +211,7 @@
 
 \AtBeginEnvironment{table}{\setstretch{1}}
 
-\newenvironment{conclusions}{\chapter*{Conclusions}\addcontentsline{toc}{chapter}{Conclusions}}{}
+\newenvironment{conclusion}{\chapter*{Conclusion}\addcontentsline{toc}{chapter}{Conclusion}}{}
 
 \makeatletter
 \newcommand\bibstyle@numerical{\bibpunct{[}{]}{,}{s}{,}{\textsuperscript{,}}}
@@ -245,36 +233,26 @@
 }{}{}
 \makeatother
 
+\newcommand{\coverpdf}{front/title.pdf}
 \newcommand{\makeenglishcover}{%
-  \begin{titlepage}
-    \thispagestyle{empty}
-    \centering
-    \vspace*{18mm}
-    {\fontsize{20pt}{30pt}\selectfont\bfseries \thesisuniversity\par}
-    \vspace{18mm}
-    {\fontsize{20pt}{30pt}\selectfont\bfseries \thesistype\par}
-    \vspace{22mm}
-    {\fontsize{20pt}{30pt}\selectfont\bfseries \thesistitle\par}
-    \vfill
-    \vspace*{-16mm}
-    \begin{minipage}{0.56\textwidth}
-      \raggedright
-      \fontsize{14pt}{21pt}\selectfont
-      Author: \thesisauthor\par
-      Student ID: \thesisstudentid\par
-      School: \thesisschool\par
-      Major: \thesismajor\par
-      Supervisor: \thesissupervisor\par
-      Degree: \thesisdegree\par
-      Date: \thesisdate\par
-    \end{minipage}
-    \vspace*{18mm}
-  \end{titlepage}
+  \IfFileExists{\coverpdf}{%
+    \includepdf[
+      pages=-,
+      fitpaper=true,
+      pagecommand={\thispagestyle{empty}}%
+    ]{\coverpdf}%
+    \setcounter{page}{2}%
+  }{%
+    \ClassError{hitbook-en}{Required cover PDF file `\coverpdf' was not found}{%
+      Please place the cover PDF at `front/title.pdf' or redefine \string\coverpdf.%
+    }%
+  }%
 }
 
 \newenvironment{abstractpage}{%
   \chapter*{Abstract}
   \addcontentsline{toc}{chapter}{Abstract}
+  % Abstract uses the same 14pt text size and line spread setting as the body text.
   \normalsize
   \linespread{1.626}\selectfont
 }{}
@@ -283,14 +261,40 @@
   \par\vspace{12pt}\noindent{\fontsize{14pt}{21pt}\selectfont\bfseries Keywords:\ }{\fontsize{14pt}{21pt}\selectfont #1}\par
 }
 
+\newcommand{\innovativeachievementstitle}{攻读学士学位期间取得创新性成果}
+\newcommand{\authorizationtitle}{哈尔滨工业大学本科毕业论文（设计）原创性声明和使用权限}
+\newcommand{\acknowledgementstitle}{致谢}
+\newcommand{\innovativeachievementspdf}{back/my-achievements.pdf}
+\newcommand{\authorizationpdf}{back/my-authorization.pdf}
+\newcommand{\acknowledgementspdf}{back/my-acknowledgements.pdf}
+\makeatletter
+\newcommand{\hitbookeninsertpdfpage}[3]{%
+  \cleardoublepage
+  \@mainmatterfalse
+  \addtocontents{toc}{\protect\setlength{\protect\cftchapnumwidth}{1.5em}}%
+  \IfFileExists{#2}{%
+    \includepdf[
+      pages=1,
+      pagecommand={%
+        \thispagestyle{plain}%
+        \phantomsection
+        \addcontentsline{toc}{chapter}{#1}%
+      }%
+    ]{#2}%
+  }{%
+    \ClassError{hitbook-en}{Required PDF file `#2' was not found}{%
+      Please place the PDF file at `#2' or redefine the corresponding PDF path macro.%
+    }%
+  }%
+}
+\makeatother
+\newcommand{\innovativeachievements}{%
+  \hitbookeninsertpdfpage{\innovativeachievementstitle}{\innovativeachievementspdf}{pdf:innovative-achievements}%
+}
 \newcommand{\authorization}{%
-  \chapter*{哈尔滨工业大学本科毕业论文（设计）原创性声明和使用权限}
-  \addcontentsline{toc}{chapter}{哈尔滨工业大学本科毕业论文（设计）原创性声明和使用权限}
-  本人郑重声明：在哈尔滨工业大学攻读学士学位期间，所提交的毕业设计（论文）《\thesistitle》，是本人在导师指导下独立进行研究工作所取得的成果。对本文的研究工作做出重要贡献的个人和集体，均已在文中以明确方式注明，其它未注明部分不包含他人已发表或撰写过的研究成果，不存在购买、由他人代写、剽窃和伪造数据等作假行为。
-
-  \vspace{1.5\baselineskip}
-  本人愿为此声明承担法律责任。
-
-  \vspace{2\baselineskip}
-  \noindent 学生签名：\hfill 日期：\hspace{30mm}
+  \innovativeachievements
+  \hitbookeninsertpdfpage{\authorizationtitle}{\authorizationpdf}{pdf:authorization}%
+}
+\newcommand{\acknowledgements}{%
+  \hitbookeninsertpdfpage{\acknowledgementstitle}{\acknowledgementspdf}{pdf:acknowledgements}%
 }

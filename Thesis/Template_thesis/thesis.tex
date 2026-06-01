@@ -1,0 +1,53 @@
+\documentclass{hitbook-en}
+
+\usepackage{siunitx}
+\usepackage{cleveref}
+
+\graphicspath{{figures/}}
+
+% Optional: redefine PDF paths if your files use different names.
+% \renewcommand{\coverpdf}{front/title.pdf}
+% \renewcommand{\innovativeachievementspdf}{back/my-achievements.pdf}
+% \renewcommand{\authorizationpdf}{back/my-authorization.pdf}
+% \renewcommand{\acknowledgementspdf}{back/my-acknowledgements.pdf}
+
+\begin{document}
+
+\makeatletter\@mainmattertrue\makeatother
+\pagenumbering{arabic}
+
+% The cover is inserted from a one-page PDF and counted as page 1.
+% The cover page itself does not display the page number.
+\makeenglishcover
+
+% Abstract page.
+\input{front/cover}
+
+\cleardoublepage
+\tableofcontents
+\cleardoublepage
+
+% Main body chapters.
+\include{body/introduction}
+\include{body/algo}
+\include{body/num}
+
+% Back matter.
+\backmatter
+\include{back/conclusion}
+
+\bibliographystyle{gbt7714-numerical}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{References}
+\bibliography{reference}
+
+% Appendix.
+\appendix
+\include{back/appA}
+
+% Full-page PDF inserts with table-of-contents entries.
+\authorization
+\acknowledgements
+
+\end{document}

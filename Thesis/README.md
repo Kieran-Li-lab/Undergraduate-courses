@@ -25,18 +25,13 @@ Main files:
 - `back/`: appendix and back-matter pages.
 - `reference.bib`: bibliography database.
 - `figures/`: figure assets.
-
-Replace the placeholders near the top of `template_thesis.tex`:
-
+- For PDF files should be insected into to the corresponding place, which could be directly exported from the official Word template. Please disable the header and footer in the template.
+  
 ```tex
-\renewcommand{\thesistitle}{Template Thesis Title}
-\renewcommand{\thesisauthor}{Author Name}
-\renewcommand{\thesisstudentid}{Student ID}
-\renewcommand{\thesisschool}{School Name}
-\renewcommand{\thesismajor}{Major Name}
-\renewcommand{\thesissupervisor}{Supervisor Name}
-\renewcommand{\thesisdegree}{Bachelor Degree}
-\renewcommand{\thesisdate}{Month Year}
+    front/title.pdf
+    back/my-achievements.pdf
+    back/my-authorization.pdf
+    back/my-acknowledgements.pdf
 ```
 
 Recommended use:
@@ -53,17 +48,7 @@ The example files demonstrate equations, figures, tables, algorithm tables, theo
 
 ## Slides Template
 
-The slide template entry file is:
-
-```tex
-Template_slides/template.tex
-```
-
-Compile with:
-
-```text
-XeLaTeX
-```
+Compile with `XeLaTeX`
 
 Minimum files needed for Overleaf:
 
@@ -88,18 +73,3 @@ Recommended use:
 - Put all image assets in `hit-template-assets/` or another clearly named folder.
 - Use `\begin{frame}[noframenumbering]{...}` for backup or question slides that should not affect the total slide count.
 
-## Upload Notes
-
-When sharing the templates, upload the `Template_thesis/` and `Template_slides/` folders. Avoid uploading local build artifacts such as:
-
-- `*.aux`
-- `*.log`
-- `*.out`
-- `*.toc`
-- `*.bbl`
-- `*.blg`
-- `*.fls`
-- `*.fdb_latexmk`
-- `*.synctex.gz`
-
-These files are generated automatically during compilation.

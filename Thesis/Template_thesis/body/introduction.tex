@@ -1,0 +1,48 @@
+\chapter{Introduction}
+
+\section{Background}
+
+This chapter demonstrates ordinary paragraphs, citations, equations, figures, tables, and section levels. Superscript citations are produced by \verb|\cite|, for example \cite{sample-journal}. Inline citations are produced by \verb|\inlinecite|, for example \inlinecite{sample-book}.
+
+The first paragraph after a heading is indented automatically. A displayed equation is numbered by chapter, as shown in equation \eqref{eq:sample-model}.
+\begin{equation}\label{eq:sample-model}
+  \min_{x\in\mathbb{R}^{d}} F(x):=f(x)+g(x).
+\end{equation}
+
+\section{Figures}
+
+Figure \ref{fig:placeholder} is a placeholder. Replace the framed box with \verb|\includegraphics| when a real figure is available.
+\begin{figure}[htbp]
+  \centering
+  \fbox{\rule{0pt}{35mm}\rule{80mm}{0pt}}
+  \caption{A placeholder figure}
+  \label{fig:placeholder}
+\end{figure}
+
+\section{Tables}
+
+Table \ref{tab:notation} shows a standard three-line table.
+\begin{table}[htbp]
+  \centering
+  \caption{Basic notation}
+  \label{tab:notation}
+  \begin{tabular}{ll}
+    \toprule
+    Symbol & Meaning \\
+    \midrule
+    $x$ & Decision variable \\
+    $f$ & Smooth function \\
+    $g$ & Nonsmooth function \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Heading Levels}
+
+\subsection{Subsection Example}
+
+This is a subsection example.
+
+\subsubsection{Subsubsection Example}
+
+This is a subsubsection example.
